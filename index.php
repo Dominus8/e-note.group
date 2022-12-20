@@ -13,7 +13,7 @@
 
 <body>
     <div class="container">
-        <img style="width:100%; height:auto;" src="header.jpeg" alt="header">
+        <img style="width:100%; height:auto;" src="header.jpg" alt="header">
         <div class="row">
             <div class="col-md-12">
                 <h1>E-note.group</h1>
