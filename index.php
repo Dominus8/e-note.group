@@ -12,13 +12,16 @@
 </head>
 
 <body>
-    <div class="row">
-        <div class="col-md-12">
-            <h1>E-note.group</h1>
-            <h2>
-                It для людей.
-            </h2>
-            <p>Наличие товаров можете уточнить по телефону +74993502608 <br> Или написав на почту info@enote-shop.ru</p>
+    <div class="container">
+        <img style="width:100%; height:auto;" src="header.jpeg" alt="header">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>E-note.group</h1>
+                <h2>
+                    It для людей.
+                </h2>
+                <p>Наличие товаров можете уточнить по телефону +74993502608 <br> Или написав на почту info@enote-shop.ru</p>
+            </div>
         </div>
     </div>
 
