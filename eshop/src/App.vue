@@ -1,14 +1,17 @@
 <template>
 <div class="" id="app">
   <p>Приблуда на вуе</p>
+  <e-main-wrapper />
 </div>
 </template>
 
 <script>
+import eMainWrapper from "./components/e-main-wrapper.vue";
 
 export default {
   name: 'App',
   components: {
+    eMainWrapper
   }
 }
 </script>
