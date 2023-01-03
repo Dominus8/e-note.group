@@ -19,7 +19,7 @@ export default{
     props:{},
     data(){
         return{
-            title:'Maim wrapper'
+            title:'Main wrapper'
         }
     },
     computed:{},
@@ -31,11 +31,8 @@ export default{
 }
 </script>
 
-<style scoped>
+<style lang="scss">
     .e-main-wrapper{
-        display: flex;
-        justify-content: center;
-        align-items: center;
         max-width: 900px;
         margin: 0 auto;
     }

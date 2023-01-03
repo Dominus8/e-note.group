@@ -1,7 +1,9 @@
 <template>
     <div class="e-catalog">
         <p>{{ title }}</p>
-        <eCatalogItem/>
+        <div class="e-catalog__list">
+            <eCatalogItem/>
+        </div>
     </div>
 </template>
 <script>
@@ -25,6 +27,14 @@ export default {
     }
 }
 </script>
-<style>
+<style lang="scss">
+.e-catalog{
+    &__list{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
     
 </style>
