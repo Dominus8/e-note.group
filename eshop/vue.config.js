@@ -1,9 +1,9 @@
 module.exports = {
-css:{
-  loaderOptions:{
-    scss:{
-      prependData: '@imprt"@/assets/style/style.scss";'
+    css: {
+        loaderOptions: {
+            sass: {
+                additionalData: `@imprt"@/assets/style/style.scss";`
+            }
+        }
     }
-  }
-}
 };

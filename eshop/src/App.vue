@@ -1,6 +1,5 @@
 <template>
 <div class="" id="app">
-  <p>Приблуда на вуе</p>
   <e-main-wrapper />
 </div>
 </template>

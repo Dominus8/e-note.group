@@ -1,6 +1,5 @@
 <template>
     <div class="e-main-wrapper">
-        <p>{{title}}</p>
         <eCatalog/>
         <eCard/>
     </div>
@@ -19,7 +18,6 @@ export default{
     props:{},
     data(){
         return{
-            title:'Main wrapper'
         }
     },
     computed:{},
@@ -31,7 +29,7 @@ export default{
 }
 </script>
 
-<style lang="scss">
+<style >
     .e-main-wrapper{
         max-width: 900px;
         margin: 0 auto;
