@@ -1,17 +1,30 @@
 <template>
     <div class="e-cart">
-        <p>{{ title }}</p>
+        <h1>{{ title }}</h1>
+        <eCartItem
+    
+        />
     </div>
 </template>
 <script>
+import eCartItem from './e-cart-item.vue'
+
 export default {
     name:'e-cart',
     components:{
+        eCartItem
     },
-    props:{},
+    props:{
+        CART_DATA:{
+            type: Array,
+            default(){
+                return []
+            }
+        }
+    },
     data(){
         return{
-            title:'Cart'
+            title:'Cart item'
         }
     },
     computed:{},

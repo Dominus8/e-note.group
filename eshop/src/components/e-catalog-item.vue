@@ -5,7 +5,9 @@
         <div class="e-catalog-item__price">Price: {{ product_data.price }} руб.</div>
         <div class="e-catalog-item__article">{{ product_data.article }}</div>
         
-        <button class="e-catalog-item__btn btn" @click="sendDataToParret">Add to cart</button>
+        <button class="e-catalog-item__btn btn" 
+        @click="addToCart"
+        >Add to cart</button>
     </div>
 </template>
 <script>
@@ -26,8 +28,8 @@ export default {
     },
     computed:{},
     methods:{
-        sendDataToParret(){
-            this.$emit('sendArticle', this.product_data.article)
+        addToCart(){
+            this.$emit('addToCart', this.product_data)
         }
     },
     watch:{},
