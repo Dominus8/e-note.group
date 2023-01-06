@@ -1,8 +1,10 @@
 <template>
     <div class="e-cart">
         <h1>{{ title }}</h1>
-        <eCartItem
-    
+        <e-cart-item
+        v-for="item in cart_data"
+        :key="item.id"
+        :cart_item_data="item"
         />
     </div>
 </template>
@@ -15,7 +17,7 @@ export default {
         eCartItem
     },
     props:{
-        CART_DATA:{
+        cart_data:{
             type: Array,
             default(){
                 return []
@@ -24,7 +26,7 @@ export default {
     },
     data(){
         return{
-            title:'Cart item'
+            title: 'Cart'
         }
     },
     computed:{},
