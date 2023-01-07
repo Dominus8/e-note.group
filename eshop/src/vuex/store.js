@@ -11,8 +11,11 @@ const store = createStore({
         SET_PRODUCT_TO_STATE: (state, products) => {
             state.products = products;
         },
-        SRT_CART: (state, product) => {
+        SET_CART: (state, product) => {
             state.cart.push(product);
+        },
+        REMOVE_FROM_CART: (state, index) => {
+            state.cart.splice(index, 1)
         }
     },
     actions: {
@@ -31,7 +34,10 @@ const store = createStore({
         },
         ADD_TO_CART({ commit }, product) {
 
-            commit('SRT_CART', product);
+            commit('SET_CART', product);
+        },
+        DELETE_FROM_CART({ commit }, index) {
+            commit('REMOVE_FROM_CART', index)
         }
     },
     getters: {

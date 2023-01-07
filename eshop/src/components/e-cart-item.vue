@@ -2,13 +2,14 @@
     <div class="e-cart-item">
         <img class="e-cart-item__image" :src="require('../assets/images/'+ cart_item_data.image)" alt="image">
         <div class="e-cart-item__info">
-            <p>{{cart_item_data.name}}</p>
-            <p>{{cart_item_data.price}}</p>
-            <p>{{cart_item_data.article}}</p>
+            <p>Наименование: {{cart_item_data.name}}</p>
+            <p>Цена: {{cart_item_data.price}}</p>
+            <p>Ариткул: {{cart_item_data.article}}</p>
         </div>
         <div class="cart_item_data__quantity">
-        <button>Delete</button>
+           Количество: {{ cart_item_data.quantity }}
         </div>
+        <button @click="deleteFromCart">Delete</button>
     </div>
 </template>
 <script>
@@ -22,17 +23,24 @@ export default {
             default(){
                 return {}
             }
-        }
+        },
+        
     },
     data(){
         return{
-            title:'Cartitem'
+           
+            
         }
     },
     computed:{},
-    methods:{},
+    methods:{        
+        deleteFromCart(){
+            this.$emit('deleteFromCart')
+        }
+    },
     watch:{},
     mounted() {
+        this.$props.cart_item_data['quantity'] = 1;
     }
 }
 </script>
