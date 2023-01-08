@@ -1,38 +1,32 @@
 <template>
     <div class="e-main-wrapper">
-        <eCatalog/>
-        <eCard 
-        v-if="CART.length"
-        :cart_data="CART"
-        />
+        <keep-alive>
+            <router-view></router-view>
+        </keep-alive>
+
     </div>
 </template>
 
 <script>
-import eCatalog from './e-catalog.vue';
-import eCard from './e-cart.vue'
-import { mapGetters } from 'vuex';
+
 export default{
 
     name:'e-main-wrapper',
-    components:{
-        eCatalog,
-        eCard
-    },
+
     props:{},
     data(){
         return{
         }
     },
     computed:{
-        ...mapGetters(['CART'])
+
     },
     methods:{
 
     },
     watch:{},
     mounted() {
-        console.log("Hello world it's mounted")
+
     }
 }
 </script>

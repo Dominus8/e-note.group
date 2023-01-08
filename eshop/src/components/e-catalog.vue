@@ -1,6 +1,9 @@
 <template>
     <div class="e-catalog">
         <h1>{{ title }}</h1>
+        <router-link :to="{name:'cart'}">
+            <div class="e-catalog__link_to_cart">Cart: {{ CART.length }}</div>
+        </router-link>
         <div class="e-catalog__list">
             <eCatalogItem
             v-for="product in PRODUCTS"
@@ -28,7 +31,8 @@ export default {
     },
     computed:{
         ...mapGetters([
-            'PRODUCTS'
+            'PRODUCTS',
+            'CART'
         ]),
     },
     methods:{
@@ -55,6 +59,13 @@ export default {
         flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
+    }
+    &__link_to_cart{
+        position: absolute;
+        top: 10px;
+        padding: 16px;
+        border-radius: 5px;
+        border: solid 1px grey;
     }
 }
     
