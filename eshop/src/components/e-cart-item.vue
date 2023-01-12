@@ -7,7 +7,10 @@
             <p>Ариткул: {{cart_item_data.article}}</p>
         </div>
         <div class="cart_item_data__quantity">
-           Количество: {{ cart_item_data.quantity }}
+            Количество: 
+            <span @click="decrementItem">-</span>
+            {{ cart_item_data.quantity }}
+            <span @click="inkrementItem">+</span>
         </div>
         <button @click="deleteFromCart">Delete</button>
     </div>
@@ -33,7 +36,14 @@ export default {
         }
     },
     computed:{},
-    methods:{        
+    methods:{  
+
+        decrementItem(){
+            this.$emit('decrement')
+        },
+        inkrementItem(){
+            this.$emit('increment')
+        },
         deleteFromCart(){
             this.$emit('deleteFromCart')
         }
