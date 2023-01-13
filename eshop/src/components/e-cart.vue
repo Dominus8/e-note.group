@@ -6,12 +6,12 @@
         </router-link>
         <p v-if="!CART.length">Ничего нет...</p>
         <e-cart-item
-        v-for="(item, index) in CART"
-        :key="item.id"
-        :cart_item_data="item"
-        @deleteFromCart = 'deleteFromCart(index)'
-        @increment = 'increment(index)'
-        @decrement = 'decrement(index)'
+            v-for="(item, index) in CART"
+            :key="item.id"
+            :cart_item_data="item"
+            @deleteFromCart = 'deleteFromCart(index)'
+            @increment = 'increment(index)'
+            @decrement = 'decrement(index)'
         />
         <div class="e-cart__total-price">
             <div class="total-price__title">

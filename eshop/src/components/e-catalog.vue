@@ -1,6 +1,10 @@
 <template>
     <div class="e-catalog">
         <h1>{{ title }}</h1>
+        <e-select
+            :selected="selected"
+            :options="categories"
+        />
         <router-link :to="{name:'cart'}">
             <div class="e-catalog__link_to_cart">Cart: {{ CART.length }}</div>
         </router-link>
@@ -16,17 +20,24 @@
 </template>
 <script>
 import eCatalogItem from './e-catalog-item.vue';
+import eSelect from './e-select.vue'
 import {mapActions, mapGetters} from 'vuex';
 
 export default {
     name:'e-catalog',
     components:{
-        eCatalogItem
+        eCatalogItem,
+        eSelect
     },
     props:{},
     data(){
         return{
             title:'Catalog',
+            categories:[
+                {name: 'All', value: 1},
+                {name: 'Phones', value: 2},
+                {name: 'communicators', value: 3}
+            ]
         }
     },
     computed:{

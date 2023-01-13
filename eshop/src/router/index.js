@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import eCatalog from '../components/e-catalog.vue'
 import eCart from '../components/e-cart.vue'
+import eSelect from '../components/e-select.vue'
 
 const routes = [{
         path: '/',
@@ -12,6 +13,11 @@ const routes = [{
         name: 'cart',
         component: eCart,
         props: true
+    },
+    {
+        path: '/select',
+        name: 'eselect',
+        component: eSelect
     }
 ]
 
