@@ -28,12 +28,12 @@ const store = createStore({
                 state.cart.push(product);
             }
         },
-        DECREMENT_CART_ITEM:(state, index)=>{
-            if(state.cart[index].quantity > 1 ){
+        DECREMENT_CART_ITEM: (state, index) => {
+            if (state.cart[index].quantity > 1) {
                 state.cart[index].quantity--
             }
         },
-        INCREMENT_CART_ITEM:(state, index)=>{
+        INCREMENT_CART_ITEM: (state, index) => {
             state.cart[index].quantity++
 
         },
@@ -43,7 +43,7 @@ const store = createStore({
     },
     actions: {
         GET_PRODUCTS_FROM_API({ commit }) {
-            return axios('http://localhost:3000/products', {
+            return axios('http://212.109.195.83:8181/products', {
                     method: "GET"
                 })
                 .then((products) => {
@@ -55,11 +55,11 @@ const store = createStore({
                     return error;
                 })
         },
-        DECREMENT_CART_ITEM({commit},index){
-            commit('DECREMENT_CART_ITEM',index)
+        DECREMENT_CART_ITEM({ commit }, index) {
+            commit('DECREMENT_CART_ITEM', index)
         },
-        INCREMENT_CART_ITEM({commit},index){
-            commit('INCREMENT_CART_ITEM',index)
+        INCREMENT_CART_ITEM({ commit }, index) {
+            commit('INCREMENT_CART_ITEM', index)
         },
         ADD_TO_CART({ commit }, product) {
 
