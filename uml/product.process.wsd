@@ -1,22 +1,26 @@
 start
-    ' :Admin creates Product:
-    :Admin creates Product template;
-    :Admin fills Product template;
-    :Admin sets Product_isActive;
-    :Admin sets Product_amount;
-    :Admin save Product template;
+    :Admin creates Product:
+    ----
+    Admin creates Product template
+    Admin fills Product template
+    Admin sets Product_isActive
+    Admin sets Product_amount
+    Admin save Product template;
 
     :Customer choose category;
-    :Customer choose Product from catalog;
-    if (.) then (Customer click add_to_buscket)
+    :Customer search Product in catalog;
+    if (Customer asure abaut Product) then (yes)
         
-    else (Customer click product)
-        :Product page is opened;
-        :Customer click add_to_buscket;
+    else (no)
+        :Customer explore Product
+        ----
+        Customer click product
+        Customer go throu product images;
     endif
 
+    :Customer add Product to buscket;
     :Customer Open Buscket;
-    :Customer Sees order;
+    :Customer explore order;
     :Customer change amount of items in order;
     :Customer fills contact details;
     :Customer makes order;
