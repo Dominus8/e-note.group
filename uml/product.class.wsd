@@ -1,0 +1,60 @@
+class Product{
+    id: int
+    is_active: bool
+    available_quantity: int
+    title: str
+    subtitle: str
+    images: List[Image]
+    main_image: Image
+    article: str
+    description: str
+    price: int
+    parameters: Dict[str,str]
+    category: Category
+}
+
+class Image{
+    image: byte
+}
+
+
+class Category{
+    parent: Category
+    image: Image
+    icon_name: str
+    name: str
+}
+
+class Order{
+    order_id: int
+    datetime: datetime
+    customer_name: str
+    customer_phone: str
+    total_price: int
+    customer: Customer
+    items: List[OrderItem]
+}
+
+class OrderItem{
+    amount: int
+    product: Product
+}
+
+
+
+class User{
+    role
+}
+
+enum Role{
+    Customer
+    Admin
+}
+
+User --> Role
+Product -left-> Category
+    Category --> Image
+Product *--> Image
+Order --> User
+Order *--> OrderItem
+    OrderItem -left-> Product

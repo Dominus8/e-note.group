@@ -1,4 +1,7 @@
 start
+    :Admin creates Category;
+
+
     :Admin creates Product:
     ----
     Admin creates Product template
