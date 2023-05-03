@@ -10,7 +10,7 @@ class Product{
     description: str
     price: int
     parameters: Dict[str,str]
-    category: Category
+    category: List[Category]
 }
 
 class Image{
@@ -33,11 +33,19 @@ class Order{
     total_price: int
     customer: Customer
     items: List[OrderItem]
+    adress: str
+    comment: str
+    self_pickup: bool
+    delivery_price: int
 }
 
 class OrderItem{
     amount: int
     product: Product
+}
+
+class Calculator{
+    calculate()
 }
 
 

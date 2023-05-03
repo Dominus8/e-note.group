@@ -25,8 +25,15 @@ start
     :Customer Open Buscket;
     :Customer explore order;
     :Customer change amount of items in order;
-    :Customer fills contact details;
-    :Customer makes order;
+    :Customer fills contact details
+    ----
+    customer fill comment
+    customer fill adress;
+
+    :Customer makes order
+    ----
+    calculator calculate delivery price
+    customer confirm order deteils;
 
     :Notification sent to Admin;
     :Admin process order;
