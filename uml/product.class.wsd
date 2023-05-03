@@ -37,6 +37,7 @@ class Order{
     comment: str
     self_pickup: bool
     delivery_price: int
+    completed: bool
 }
 
 class OrderItem{

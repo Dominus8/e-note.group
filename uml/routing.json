@@ -1,0 +1,26 @@
+{
+    "products":{
+        "post api/v1/products": "Creates a product - create",
+        "get api/v1/products/{Id}": "returns product by id - read - edit page",
+        "put api/v1/products/{Id}": "update",
+        "delete api/v1/products/{Id}":"delete",
+    },
+
+    "categories":{
+        "get api/v1/categories/{Id}/products": "listing products of category",
+        "post api/v1/categories": "Creates a category - create",
+        "get api/v1/categories/{Id}/categories": "listing of subcategories",
+        "put api/v1/categories/{Id}": "update",
+        "delete api/v1/categories/{Id}":"delete"    
+    },
+
+    "orders":{
+
+        "post api/v1/orders": "отправить заказ",
+        "get api/v1/orders": "lists all orders - for admin",
+        "get api/v1/orders/{Id}": "edit page for order",        
+        "put api/v1/orders/{Id}": "update",
+        "delete api/v1/orders/{Id}":"delete",
+
+    }
+}
