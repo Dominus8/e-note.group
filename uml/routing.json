@@ -16,7 +16,7 @@
 
     "orders":{
 
-        "post api/v1/orders": "отправить заказ",
+        "post api/v1/orders": "на кнопке 'отправить заказ', order_items отправляются списком айдишников и количества товаров",
         "get api/v1/orders": "lists all orders - for admin",
         "get api/v1/orders/{Id}": "edit page for order",        
         "put api/v1/orders/{Id}": "update",

@@ -1,0 +1,55 @@
+class Slider{}
+
+' product:
+class Product{}
+class ProductsList{}
+class ProductTablet{}
+
+
+
+' category:
+class CategoriesList{}
+class Category{}
+
+' order:
+class Order{}
+class OrderTablet{}
+class OrdersList{}
+
+' order_item:
+class OrderItemsList{}
+
+
+class MainPage{}
+MainPage --> Slider
+MainPage --> Category
+
+
+CategoryPage --> Category
+CategoryPage --> Catalog
+Catalog *--> CategoryCatalogTablet
+Category --> ProductsList
+Category --> CategoryName
+Category --> BreadCrumbs
+ProductsList *--> ProductTablet
+
+AdminCategoryPage --> CategoryList
+CategoryList *--> CategoryTablet
+CategoryTablet --> Name
+CategoryTablet --> IconSrc
+
+ProductPage --> Product
+Product --> Title
+Product --> Description
+Product --> Gallery
+Product --> EButton
+
+OrderPage --> Order
+Order --> OrderItemList
+OrderItemList *--> OrderItemTablet
+OrderItemTablet --> OrderItemTabletInfo
+OrderItemTablet --> OrderItemTabletControls
+
+AdminOrdersPage --> OrderStatusTabs
+AdminOrdersPage --> OrdersList
+OrdersList *--> OrderTablet 

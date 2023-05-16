@@ -27,17 +27,36 @@ class Category{
 
 class Order{
     order_id: int
-    datetime: datetime
+    creation_datetime: datetime
     customer_name: str
     customer_phone: str
+    customer_email:str
     total_price: int
     customer: Customer
-    items: List[OrderItem]
-    adress: str
+    items: List[OrderItem]    
     comment: str
-    self_pickup: bool
-    delivery_price: int
+    delivery: Delivery
     completed: bool
+}
+
+class Delivery{
+    delivery_adress: str
+    delivery_type: int
+    delivery_price: int
+
+    calculate_price()
+}
+
+class SdekDelivery{
+
+}
+
+class OrderSyncService{}
+
+enum DeliveryType{
+    sdek
+    self_pickup
+    delivery
 }
 
 class OrderItem{
@@ -53,6 +72,7 @@ class Calculator{
 
 class User{
     role
+    orders: List[Order]
 }
 
 enum Role{
@@ -65,5 +85,8 @@ Product -left-> Category
     Category --> Image
 Product *--> Image
 Order --> User
+Order -left-> Delivery
+    Delivery -left-> DeliveryType
+    SdekDelivery <|-- Delivery
 Order *--> OrderItem
     OrderItem -left-> Product
